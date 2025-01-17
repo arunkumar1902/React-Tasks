@@ -6,7 +6,7 @@ export default function FunctionalComponent(props) {
     return (
         <div>
             <h3>FunctionalComponent</h3>
-            <p>Hello {name}, {props.message}</p>
+            <p> Hello {name}, {props.message}</p>
         </div>
     )
 }

@@ -7,7 +7,6 @@ export default function FunctionalComponent(props) {
         <div>
             <h3>FunctionalComponent</h3>
             <p>Hello {name}, {props.message}</p>
-
         </div>
     )
 }

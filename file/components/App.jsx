@@ -17,7 +17,7 @@ export default function App() {
       <FunctionalComponent message="Greetings"></FunctionalComponent>
       {/* <FunctionComponentLifecycle></FunctionComponentLifecycle> */}
       {/* <ClassComponentLifecycle></ClassComponentLifecycle> */}
-      <ControlledForm></ControlledForm>
+      {/* <ControlledForm></ControlledForm> */}
       <UncontrolledForm></UncontrolledForm>
     </div>
   )

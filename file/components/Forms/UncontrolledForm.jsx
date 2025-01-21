@@ -2,96 +2,106 @@ import React, { useRef, useState } from 'react'
 
 export default function UncontrolledForm() {
 
-    const emailRef = useRef(null);
-    const passwordRef= useRef(null);
-    const usernameRef= useRef(null);
-    const [emailError, setEmailError]= useState('');
-    const [usernameError, setUsernameError]= useState('');
-    const [passwordError, setPasswordError]= useState('');
+    const usernameRef = useRef();
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const [emailError, setEmailError] = useState('');
+    const [usernameError, setUsernameError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
+    const validation = () => {
+        const usernamePattern = new RegExp(/^(?=.*[A-Za-z])[A-Za-z]+$/);
+        const emailPattern = new RegExp(/^[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$/);
+        const passwordPattern = new RegExp(/^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,}$/);
 
-    const submitForm = (event)=>{
-        event.preventDefault();
+        const usernameValue = usernameRef.current.value;
+        const emailValue = emailRef.current.value;
+        const passwordValue = passwordRef.current.value;
 
-        const emailPattern = new RegExp(/^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
-        const passwordPattern = new RegExp(/^[a-zA-Z0-9!@#$%^&*]{7,}$/);
-        const usernamePattern = new RegExp(/^[A-Za-z]+$/);
+        let isValid=true;
 
-
-        const emailValue =emailRef.current.value;
-        const usernameValue =usernameRef.current.value;
-        const passwordValue =passwordRef.current.value;
-
-        if(!usernameValue || !usernamePattern.test(usernameValue)){
+        //username validation
+        if (!usernameValue || !usernamePattern.test(usernameValue)) {
             setUsernameError("Enter Valid Username");
-        }
-        else{
+            isValid=false;
+        }else {
             setUsernameError('');
         }
-       
 
-        if(!emailValue || !emailPattern.test(emailValue)){
+
+        //email validation
+        if (!emailValue || !emailPattern.test(emailValue)) {
             setEmailError("Enter Valid EmailId");
-        }
-        else{
+            isValid=false;
+        }else {
             setEmailError('');
         }
 
-        if(!passwordValue || !passwordPattern.test(passwordValue)){
+        // password validation
+        if (!passwordValue || !passwordPattern.test(passwordValue)) {
             setPasswordError("Enter Valid Password");
-        }
-        else{
+            isValid=false;
+        }else {
             setPasswordError('');
         }
 
-        if(!usernameError && !emailError && !passwordError && usernameValue && emailValue && passwordValue){
-            alert(`Username : ${usernameValue} \nEmail : ${emailValue} \nPassword : ${passwordValue}`);
+        return isValid;
+    }
 
-            usernameRef.current.value='';
-            emailRef.current.value='';
-            passwordRef.current.value='';
+    const formsubmit = (event) => {
+        event.preventDefault();
+
+        
+        if(validation()){
+            alert(`Username : ${usernameRef.current.value } \nEmail : ${emailRef.current.value} \nPassword : ${passwordRef.current.value}`);
+
+            usernameRef.current.value = '';
+            emailRef.current.value = '';
+            passwordRef.current.value = '';
         }
     }
-  return (
-    <div>
-        <h3>Login Form</h3>
 
-        <form onSubmit={submitForm}>
-        <tr>
-                <td>Username</td>
-                <td>
-                    <input 
-                    type="text" 
-                    ref={usernameRef}
-                    required
-                    /></td>
-                    <td>{usernameError && <div style={{color:'red'}}>{usernameError}</div>}</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <input 
-                    type="email" 
-                    ref={emailRef}
-                    required
-                    /></td>
-                    <td>{emailError && <div style={{color:'red'}}>{emailError}</div>}</td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td>
-                    <input 
-                    type="password" 
-                    ref={passwordRef}
-                    required
-                    /></td>
-                    <td>{passwordError && <div style={{color:'red'}}>{passwordError}</div>}</td>
-                    <td></td>
-            </tr>
+    return (
+        <div>
+            <h3>Register Form</h3>
 
-            <button type='submit'>Submit</button>
-        </form>
+            <form onSubmit={formsubmit}>
+                <table>
 
-    </div>
-  )
+                <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td>
+                        <input
+                            type="text"
+                            ref={usernameRef}
+                        /></td>
+                    <td>{usernameError && <div style={{ color: 'red' }}>{usernameError}</div>}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input
+                            type="email"
+                            ref={emailRef}
+                        /></td>
+                    <td>{emailError && <div style={{ color: 'red' }}>{emailError}</div>}</td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input
+                            type="password"
+                            ref={passwordRef}
+                        /></td>
+                    <td>{passwordError && <div style={{ color: 'red' }}>{passwordError}</div>}</td>
+                </tr>
+                </tbody>
+
+                </table>
+                <button type='submit'>Submit</button>
+            </form>
+
+        </div>
+    )
 }

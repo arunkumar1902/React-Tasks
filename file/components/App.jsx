@@ -8,6 +8,8 @@ import ControlledForm from './Forms/ControlledForm.jsx'
 import UncontrolledForm from './Forms/UncontrolledForm.jsx'
 import PropertyDrilling from './context/PropertyDrilling.jsx'
 import Context from './context/Context.jsx'
+import HocDemo from './HocDemo.js'
+import Sample from './Sample.jsx'
 
 
 
@@ -15,14 +17,15 @@ export default function App() {
   return (
     <div>
       <HelloWorld></HelloWorld>
-      <ClassComponent name="Arun"></ClassComponent>
-      <FunctionalComponent message="Greetings"></FunctionalComponent>
+      {/* <ClassComponent name="Arun"></ClassComponent> */}
+      {/* <FunctionalComponent message="Greetings"></FunctionalComponent> */}
       {/* <FunctionComponentLifecycle></FunctionComponentLifecycle> */}
       {/* <ClassComponentLifecycle></ClassComponentLifecycle> */}
       {/* <ControlledForm></ControlledForm> */}
       {/* <UncontrolledForm></UncontrolledForm> */}
       {/* <PropertyDrilling value="Welcome"></PropertyDrilling> */}
-      <Context message="Hello World"></Context>
+      {/* <Context message="Hello World"></Context> */}
+      <Sample></Sample>
     </div>
   )
 }

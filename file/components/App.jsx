@@ -8,15 +8,14 @@ import ControlledForm from './Forms/ControlledForm.jsx'
 import UncontrolledForm from './Forms/UncontrolledForm.jsx'
 import PropertyDrilling from './context/PropertyDrilling.jsx'
 import Context from './context/Context.jsx'
-import HocDemo from './HocDemo.js'
 import Sample from './Sample.jsx'
+import CodeSplit from './CodeSplitting/CodeSplit.jsx'
 
-
-
+ 
 export default function App() {
   return (
     <div>
-      <HelloWorld></HelloWorld>
+      {/* <HelloWorld></HelloWorld> */}
       {/* <ClassComponent name="Arun"></ClassComponent> */}
       {/* <FunctionalComponent message="Greetings"></FunctionalComponent> */}
       {/* <FunctionComponentLifecycle></FunctionComponentLifecycle> */}
@@ -25,8 +24,10 @@ export default function App() {
       {/* <UncontrolledForm></UncontrolledForm> */}
       {/* <PropertyDrilling value="Welcome"></PropertyDrilling> */}
       {/* <Context message="Hello World"></Context> */}
-      <Sample></Sample>
-    </div>
+      {/* <Sample></Sample> */}
+      <CodeSplit></CodeSplit>
+      
+    </div> 
   )
 }
 

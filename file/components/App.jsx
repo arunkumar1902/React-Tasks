@@ -10,6 +10,7 @@ import PropertyDrilling from './context/PropertyDrilling.jsx'
 import Context from './context/Context.jsx'
 import Sample from './Sample.jsx'
 import CodeSplit from './CodeSplitting/CodeSplit.jsx'
+import EditTable from './ReviewTask/EditTable.jsx'
 
  
 export default function App() {
@@ -25,7 +26,8 @@ export default function App() {
       {/* <PropertyDrilling value="Welcome"></PropertyDrilling> */}
       {/* <Context message="Hello World"></Context> */}
       {/* <Sample></Sample> */}
-      <CodeSplit></CodeSplit>
+      {/* <CodeSplit></CodeSplit> */}
+      <EditTable></EditTable>
       
     </div> 
   )

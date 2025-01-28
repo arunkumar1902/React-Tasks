@@ -11,6 +11,7 @@ import Context from './context/Context.jsx'
 import Sample from './Sample.jsx'
 import CodeSplit from './CodeSplitting/CodeSplit.jsx'
 import EditTable from './ReviewTask/EditTable.jsx'
+import List from './ListKeys/List.jsx'
 
  
 export default function App() {
@@ -27,8 +28,8 @@ export default function App() {
       {/* <Context message="Hello World"></Context> */}
       {/* <Sample></Sample> */}
       {/* <CodeSplit></CodeSplit> */}
-      <EditTable></EditTable>
-      
+      {/* <EditTable></EditTable> */}
+      <List></List>
     </div> 
   )
 }

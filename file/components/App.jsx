@@ -12,6 +12,7 @@ import Sample from './Sample.jsx'
 import CodeSplit from './CodeSplitting/CodeSplit.jsx'
 import EditTable from './ReviewTask/EditTable.jsx'
 import List from './ListKeys/List.jsx'
+import LiftingState from './LiftingStateUp/LiftingState.jsx'
 
  
 export default function App() {
@@ -29,7 +30,8 @@ export default function App() {
       {/* <Sample></Sample> */}
       {/* <CodeSplit></CodeSplit> */}
       {/* <EditTable></EditTable> */}
-      <List></List>
+      {/* <List></List> */}
+      <LiftingState></LiftingState>
     </div> 
   )
 }

@@ -13,6 +13,7 @@ import CodeSplit from './CodeSplitting/CodeSplit.jsx'
 import EditTable from './ReviewTask/EditTable.jsx'
 import List from './ListKeys/List.jsx'
 import LiftingState from './LiftingStateUp/LiftingState.jsx'
+import ProfilerDemo from './profiler/ProfilerDemo.jsx'
 
  
 export default function App() {
@@ -31,7 +32,8 @@ export default function App() {
       {/* <CodeSplit></CodeSplit> */}
       {/* <EditTable></EditTable> */}
       {/* <List></List> */}
-      <LiftingState></LiftingState>
+      {/* <LiftingState></LiftingState> */}
+      <ProfilerDemo></ProfilerDemo>
     </div> 
   )
 }

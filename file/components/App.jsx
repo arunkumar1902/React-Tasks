@@ -15,6 +15,7 @@ import List from './ListKeys/List.jsx'
 import LiftingState from './LiftingStateUp/LiftingState.jsx'
 import ProfilerDemo from './profiler/ProfilerDemo.jsx'
 import CustomHooks from './CustomHook/CustomHooks.jsx'
+import Render from './RenderProps/Render.jsx'
 
  
 export default function App() {
@@ -35,7 +36,8 @@ export default function App() {
       {/* <List></List> */}
       {/* <LiftingState></LiftingState> */}
       {/* <ProfilerDemo></ProfilerDemo> */}
-      <CustomHooks></CustomHooks>
+      {/* <CustomHooks></CustomHooks> */}
+      <Render></Render>
     </div> 
   )
 }

@@ -14,6 +14,7 @@ import EditTable from './ReviewTask/EditTable.jsx'
 import List from './ListKeys/List.jsx'
 import LiftingState from './LiftingStateUp/LiftingState.jsx'
 import ProfilerDemo from './profiler/ProfilerDemo.jsx'
+import CustomHooks from './CustomHook/CustomHooks.jsx'
 
  
 export default function App() {
@@ -33,7 +34,8 @@ export default function App() {
       {/* <EditTable></EditTable> */}
       {/* <List></List> */}
       {/* <LiftingState></LiftingState> */}
-      <ProfilerDemo></ProfilerDemo>
+      {/* <ProfilerDemo></ProfilerDemo> */}
+      <CustomHooks></CustomHooks>
     </div> 
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import HelloWorld from './HelloWorld.jsx'
 import ClassComponent from './ClassComponent.jsx'
 import FunctionalComponent from './FunctionalComponent.jsx'
@@ -16,6 +16,7 @@ import LiftingState from './LiftingStateUp/LiftingState.jsx'
 import ProfilerDemo from './profiler/ProfilerDemo.jsx'
 import CustomHooks from './CustomHook/CustomHooks.jsx'
 import Render from './RenderProps/Render.jsx'
+import StrictDemo from './strictMode/StrictDemo.jsx'
 
  
 export default function App() {
@@ -37,7 +38,8 @@ export default function App() {
       {/* <LiftingState></LiftingState> */}
       {/* <ProfilerDemo></ProfilerDemo> */}
       {/* <CustomHooks></CustomHooks> */}
-      <Render></Render>
+      {/* <Render></Render> */}
+      <StrictMode>     <StrictDemo />  </StrictMode>
     </div> 
   )
 }

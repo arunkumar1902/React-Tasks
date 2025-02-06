@@ -17,6 +17,7 @@ import ProfilerDemo from './profiler/ProfilerDemo.jsx'
 import CustomHooks from './CustomHook/CustomHooks.jsx'
 import Render from './RenderProps/Render.jsx'
 import StrictDemo from './strictMode/StrictDemo.jsx'
+import ReactWithoutJSX from './reactWithoutJSX/ReactWithoutJSX.jsx'
 
  
 export default function App() {
@@ -39,7 +40,8 @@ export default function App() {
       {/* <ProfilerDemo></ProfilerDemo> */}
       {/* <CustomHooks></CustomHooks> */}
       {/* <Render></Render> */}
-      <StrictMode>     <StrictDemo />  </StrictMode>
+      {/* <StrictMode>     <StrictDemo />  </StrictMode> */}
+      <ReactWithoutJSX></ReactWithoutJSX>
     </div> 
   )
 }

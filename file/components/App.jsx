@@ -20,6 +20,7 @@ import StrictDemo from './strictMode/StrictDemo.jsx'
 import ReactWithoutJSX from './reactWithoutJSX/ReactWithoutJSX.jsx'
 import UncontrolledComponent from './uncontrolledComponent/UncontrolledComponent.jsx'
 import Portal from './Portals/Portal.jsx'
+import WebComponent from './webComponent/WebComponent.jsx'
 
  
 export default function App() {
@@ -45,7 +46,8 @@ export default function App() {
       {/* <StrictMode>     <StrictDemo />  </StrictMode> */}
       {/* <ReactWithoutJSX></ReactWithoutJSX> */}
       {/* <UncontrolledComponent></UncontrolledComponent> */}
-      <Portal></Portal>
+      {/* <Portal></Portal> */}
+      <WebComponent></WebComponent>
     </div> 
   )
 }

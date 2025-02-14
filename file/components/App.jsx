@@ -21,6 +21,8 @@ import ReactWithoutJSX from './reactWithoutJSX/ReactWithoutJSX.jsx'
 import UncontrolledComponent from './uncontrolledComponent/UncontrolledComponent.jsx'
 import Portal from './Portals/Portal.jsx'
 import WebComponent from './webComponent/WebComponent.jsx'
+import UseStateHook from './hooks/UseStateHook.jsx'
+import UseEffectHook from './hooks/UseEffectHook.jsx'
 
  
 export default function App() {
@@ -47,7 +49,9 @@ export default function App() {
       {/* <ReactWithoutJSX></ReactWithoutJSX> */}
       {/* <UncontrolledComponent></UncontrolledComponent> */}
       {/* <Portal></Portal> */}
-      <WebComponent></WebComponent>
+      {/* <WebComponent></WebComponent> */}
+      <UseStateHook></UseStateHook>
+      <UseEffectHook></UseEffectHook>
     </div> 
   )
 }

@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react'
+import React, { createContext, StrictMode, useState } from 'react'
 import HelloWorld from './HelloWorld.jsx'
 import ClassComponent from './ClassComponent.jsx'
 import FunctionalComponent from './FunctionalComponent.jsx'
@@ -23,9 +23,16 @@ import Portal from './Portals/Portal.jsx'
 import WebComponent from './webComponent/WebComponent.jsx'
 import UseStateHook from './hooks/UseStateHook.jsx'
 import UseEffectHook from './hooks/UseEffectHook.jsx'
+import UseContextHook from './hooks/UseContextHook.jsx'
+import UseRefHook from './hooks/UseRefHook.jsx'
+import UseMemoHook from './hooks/UseMemoHook.jsx'
 
  
+export const contextDemo = createContext();
+
 export default function App() {
+
+  const [message, setMessage] = useState("Hello World");
   return (
     <div>
       {/* <HelloWorld></HelloWorld> */}
@@ -50,8 +57,16 @@ export default function App() {
       {/* <UncontrolledComponent></UncontrolledComponent> */}
       {/* <Portal></Portal> */}
       {/* <WebComponent></WebComponent> */}
-      <UseStateHook></UseStateHook>
-      <UseEffectHook></UseEffectHook>
+      {/* <UseStateHook></UseStateHook> */}
+      {/* <UseEffectHook></UseEffectHook> */}
+      <contextDemo.Provider value={{title:"UseContext Hook Demo", message }}>
+          <UseContextHook></UseContextHook>
+      </contextDemo.Provider>
+
+      <UseRefHook></UseRefHook>
+
+      <UseMemoHook></UseMemoHook>
+
     </div> 
   )
 }

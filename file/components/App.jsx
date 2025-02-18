@@ -26,6 +26,7 @@ import UseEffectHook from './hooks/UseEffectHook.jsx'
 import UseContextHook from './hooks/UseContextHook.jsx'
 import UseRefHook from './hooks/UseRefHook.jsx'
 import UseMemoHook from './hooks/UseMemoHook.jsx'
+import Counter from './Testing/Counter.jsx'
 
  
 export const contextDemo = createContext();
@@ -59,13 +60,15 @@ export default function App() {
       {/* <WebComponent></WebComponent> */}
       {/* <UseStateHook></UseStateHook> */}
       {/* <UseEffectHook></UseEffectHook> */}
-      <contextDemo.Provider value={{title:"UseContext Hook Demo", message }}>
-          <UseContextHook></UseContextHook>
-      </contextDemo.Provider>
+      {/* <contextDemo.Provider value={{title:"UseContext Hook Demo", message }}> */}
+          {/* <UseContextHook></UseContextHook> */}
+      {/* </contextDemo.Provider> */}
 
-      <UseRefHook></UseRefHook>
+      {/* <UseRefHook></UseRefHook> */}
 
-      <UseMemoHook></UseMemoHook>
+      {/* <UseMemoHook></UseMemoHook> */}
+
+      <Counter></Counter>
 
     </div> 
   )

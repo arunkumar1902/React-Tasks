@@ -27,6 +27,9 @@ import UseContextHook from './hooks/UseContextHook.jsx'
 import UseRefHook from './hooks/UseRefHook.jsx'
 import UseMemoHook from './hooks/UseMemoHook.jsx'
 import Counter from './Testing/Counter.jsx'
+import GreetingsMessage from './ReactAssessment/GreetingsMessage.jsx'
+import CounterComponent from './ReactAssessment/CounterComponent.jsx'
+import FormComponent from './ReactAssessment/FormComponent.jsx'
 
  
 export const contextDemo = createContext();
@@ -63,12 +66,14 @@ export default function App() {
       {/* <contextDemo.Provider value={{title:"UseContext Hook Demo", message }}> */}
           {/* <UseContextHook></UseContextHook> */}
       {/* </contextDemo.Provider> */}
-
       {/* <UseRefHook></UseRefHook> */}
-
       {/* <UseMemoHook></UseMemoHook> */}
-
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      
+      {/* React assessment task */}
+      <GreetingsMessage name="Arun"></GreetingsMessage>
+      <CounterComponent></CounterComponent>
+      <FormComponent></FormComponent>
 
     </div> 
   )

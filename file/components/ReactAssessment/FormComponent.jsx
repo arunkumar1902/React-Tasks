@@ -8,9 +8,43 @@ export default function FormComponent() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
+    const [error, setError] = useState({
+        nameError : "",
+        emailError : ""
+    });
+
+    function validation(){
+        const namePattern = new RegExp(/^[a-zA-Z\s]+$/);
+        const emailPattern = new RegExp(/^[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$/);
+        let isValid = true;
+
+        setError({
+            nameError:"",
+            emailError:""
+        });
+
+        if(!namePattern.test(name)){
+            isValid = false;
+            setError((prevState)=>({
+                ...prevState,
+                nameError:"Name must have only alphabets"
+            }));
+        }
+        else if(!emailPattern.test(email)){
+            isValid = false;
+            setError((prevState)=>({
+                ...prevState,
+                emailError:"Enter valid email ID"
+            }));
+        }
+        return isValid;
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert("Name : " + name + " , Email : " + email);
+        if(validation()){
+            alert("Name : " + name + " , Email : " + email);
+        };
     }
 
     return (
@@ -18,11 +52,25 @@ export default function FormComponent() {
             <h2>Form</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name : </label>
-                <input type="text" id='name' name='name' value={name} onChange={(event) => setName(event.target.value)} required />
+                <input 
+                    type="text" 
+                    id='name'
+                    value={name} 
+                    onChange={(event) => setName(event.target.value)} 
+                    required 
+                />
+                {error.nameError && <span style={{color:'red'}}>{error.nameError}</span>}
                 <br />
                 <br />
                 <label htmlFor="email">Email: </label>
-                <input type="email" id='email' name='email' value={email} onChange={(event) => setEmail(event.target.value)} required />
+                <input 
+                    type="email" 
+                    id='email' 
+                    value={email} 
+                    onChange={(event) => setEmail(event.target.value)} 
+                    required 
+                />
+                {error.emailError && <span style={{color:'red'}}>{error.emailError}</span>}
                 <br />
                 <br />
                 <button type='submit' >Submit</button>

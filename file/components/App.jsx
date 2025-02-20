@@ -30,6 +30,8 @@ import Counter from './Testing/Counter.jsx'
 import GreetingsMessage from './ReactAssessment/GreetingsMessage.jsx'
 import CounterComponent from './ReactAssessment/CounterComponent.jsx'
 import FormComponent from './ReactAssessment/FormComponent.jsx'
+import WelcomeMessage from './ReactAssessment/WelcomeMessage.jsx'
+import BackgroundColor from './ReactAssessment/BackgroundChange.jsx'
 
  
 export const contextDemo = createContext();
@@ -74,7 +76,9 @@ export default function App() {
       <GreetingsMessage name="Arun"></GreetingsMessage>
       <CounterComponent></CounterComponent>
       <FormComponent></FormComponent>
-
+      <WelcomeMessage user="Ravi"></WelcomeMessage>
+      <WelcomeMessage></WelcomeMessage>
+      <BackgroundColor></BackgroundColor>
     </div> 
   )
 }

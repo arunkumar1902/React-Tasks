@@ -1,4 +1,5 @@
 import React, { createContext, StrictMode, useState } from 'react'
+import '../assets/styles/App.css'
 import HelloWorld from './HelloWorld.jsx'
 import ClassComponent from './ClassComponent.jsx'
 import FunctionalComponent from './FunctionalComponent.jsx'

@@ -33,6 +33,7 @@ import CounterComponent from './ReactAssessment/CounterComponent.jsx'
 import FormComponent from './ReactAssessment/FormComponent.jsx'
 import WelcomeMessage from './ReactAssessment/WelcomeMessage.jsx'
 import BackgroundColor from './ReactAssessment/BackgroundChange.jsx'
+import Signup from './axios/Signup.jsx'
 
  
 export const contextDemo = createContext();
@@ -74,12 +75,14 @@ export default function App() {
       {/* <Counter></Counter> */}
       
       {/* React assessment task */}
-      <GreetingsMessage name="Arun"></GreetingsMessage>
+      {/* <GreetingsMessage name="Arun"></GreetingsMessage>
       <CounterComponent></CounterComponent>
       <FormComponent></FormComponent>
       <WelcomeMessage user="Ravi"></WelcomeMessage>
       <WelcomeMessage></WelcomeMessage>
-      <BackgroundColor></BackgroundColor>
+      <BackgroundColor></BackgroundColor> */}
+
+      <Signup></Signup>
     </div> 
   )
 }

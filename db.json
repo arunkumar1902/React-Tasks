@@ -3,9 +3,16 @@
     {
       "username": "Arun",
       "email": "kumar1902002@gmail.com",
-      "password": "@Asd123",
-      "confirmpassword": "@Asd123",
+      "password": "123@Asd",
+      "confirmpassword": "123@Asd",
       "id": 1
-    }
+    },
+    {
+        "username": "Kumar",
+        "email": "arun1902002@gmail.com",
+        "password": "123@Asd",
+        "confirmpassword": "123@Asd",
+        "id": 2
+      }
   ]
 }

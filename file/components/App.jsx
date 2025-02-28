@@ -34,6 +34,7 @@ import FormComponent from './ReactAssessment/FormComponent.jsx'
 import WelcomeMessage from './ReactAssessment/WelcomeMessage.jsx'
 import BackgroundColor from './ReactAssessment/BackgroundChange.jsx'
 import Signup from './axios/Signup.jsx'
+import UserData from './axios/UserData.jsx'
 
  
 export const contextDemo = createContext();
@@ -82,7 +83,8 @@ export default function App() {
       <WelcomeMessage></WelcomeMessage>
       <BackgroundColor></BackgroundColor> */}
 
-      <Signup></Signup>
+      {/* <Signup></Signup> */}
+      <UserData></UserData>
     </div> 
   )
 }

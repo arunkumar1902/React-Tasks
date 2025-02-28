@@ -8,11 +8,11 @@
       "id": 1
     },
     {
-        "username": "Kumar",
-        "email": "arun1902002@gmail.com",
-        "password": "123@Asd",
-        "confirmpassword": "123@Asd",
-        "id": 2
-      }
+      "username": "Kumar",
+      "email": "arun123@gmail.com",
+      "password": "123@Asd",
+      "confirmpassword": "123@Asd",
+      "id": 2
+    }
   ]
 }

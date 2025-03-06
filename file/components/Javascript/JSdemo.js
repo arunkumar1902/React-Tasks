@@ -128,10 +128,139 @@ document.getElementById("image").addEventListener("mouseover", function(){
 });
 
 //keyboard event
-
 document.getElementById("div").addEventListener("keypress", function(event){
     if(event.key === 'Enter'){
         console.log("Enter key is clicked");
     }
 })
 
+//DOM manipulation - use Js to interact and modify structure, content, or style of a web page dynamically
+
+//selecting elements
+const id = document.getElementById('button'); // refers to the 1st element with id="button"  
+const classname = document.getElementsByClassName('maindiv'); // refers all the element with same class name 
+const tag = document.getElementsByTagName("div");
+const ptag = document.querySelector('p'); // returns the 1st element that matches the css selector
+const classselector = document.querySelectorAll(".divclass"); //returns a nodelist of all eelements matches css selector
+
+//create,remove elements
+const newdiv = document.createElement('div'); //creates a new element
+newdiv.textContent = "hello";
+document.body.appendChild(newdiv); // append the new element to the end of the parent node(here body)
+document.body.removeChild(newdiv); // remove the element from the DOM
+
+//modifying attributes and content
+const buttonid = document.getElementById("buttonid");
+buttonid.setAttribute("href", "http://sample.com"); // create a new attribute to the element
+const hrefvalue = buttonid.getAttribute("href"); //returns the value of the attribute
+buttonid.removeAttribute("href"); //removes the attribute from the element
+
+const divtag = document.getElementById("divtag")
+divtag.innerHTML = "<p>Hello</p>"; // innerhtml allows to get or set html content inside an element.
+divtag.textContent = "New content"; // textcontent allows to get or set text content of an element
+
+//error handling
+//try catch block
+try{
+    let a=2;
+    let b=0;
+    let c=a/b;
+    if(b===0){
+        throw new Error("Divisor not be 0");
+    }
+}catch(error){
+    //error objects
+    console.log(error.name)
+    console.log(error.message)
+    console.log(error.stack)// stack trace shows error location
+}
+finally{ // it will always execute no matter what happen in try and catch block 
+    console.log("finally block will always run")
+}
+
+// asynchronous error handling
+//promises, async await
+async function promisedemo(){
+
+    return new Promise(
+    (resolve,reject)=>{
+        setTimeout(()=>{
+            try{
+                let data = undefinedvalue;
+                resolve(data);
+            }catch(error){
+                reject(error.message);
+            }
+        },1000);
+    });
+}
+promisedemo().then((data)=>{
+    console.log(data);
+}).catch((error)=>{
+    console.log(error);
+});
+
+//ES6 Features
+//destructuring
+let number = [1,2,3]; //array destucturing - unpacks the array elements, assign them to a variable
+let [a,b,c] = number;
+console.log(a,b,c);
+
+let person = { // obj destructuring allows to extract properties and assign to a variable
+    username:"arun",
+    location:"chennai"
+};
+let [username, location]= person;
+console.log(username, location);
+
+//destructuring in function parameters
+function demo({name, age}){
+    console.log(`I am ${name}, My age is ${age}`); //template literal ``
+}
+let data = {
+    name:'arun',
+    age:25
+}
+demo(data);
+
+//map and set
+const map = new Map(); //map - contains key value pair, key can be any data type
+map.set("name", "arun"); //set - contains unique value
+map.set("id", 200);
+console.log(map);
+
+const set = new Set();
+set.add(1);
+set.add(2);
+set.add(2);//set doesnt accept duplicates
+console.log(set)
+
+//js class syntax
+class Person{
+    constructor(name){
+        this.name = name;   
+    }
+
+    greet(){
+        console.log(`Hello, ${this.name}`);
+    }
+}
+const details = new Person("Arun")
+details.greet();
+
+// inheritance
+class parent{
+    constructor(name){
+        this.name = name;
+    }
+    greet(){
+        console.log(`hello ${this.name}`);
+    }
+}
+class child extends parent{
+    greet(){ //override parent function
+        console.log(`Good morning, ${this.name}`);
+    }
+}
+const demo = new child("arun");
+demo.greet();

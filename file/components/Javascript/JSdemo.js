@@ -264,3 +264,35 @@ class child extends parent{
 }
 const demo = new child("arun");
 demo.greet();
+
+//spread operator - used to expand elements of an array or object.
+const array1 = [1,2,3,4];
+const array2 = [5,6,7,8];
+const combine = [...array1,...array2];
+console.log(combine);
+
+//rest operator - collects the remaining elements into a single variable.
+const [val1, val2, ...restNumbers] = [10, 20, 30, 40, 50];
+console.log(val1, val2);
+console.log(restNumbers);
+
+//funcion composition - Combining multiple functions to produce a new function.
+const toUpperCase = str => str.toUpperCase();
+const exclaim = str => str + "!";
+const shout = str => exclaim(toUpperCase(str));
+console.log(shout("hello"));
+
+
+//Web APIs - allow developers to interact with the browser, server, and external services
+document.getElementById("demo").textContent = "Hello, World!"; //DOM api
+fetch("https://localhost:2000/user") //fetch api
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+localStorage.setItem("name", "Arun"); //localStorage api
+console.log(localStorage.getItem("name"));
+sessionStorage.setItem("sessionKey", "Session Data"); //sessionStorage api
+console.log(sessionStorage.getItem("sessionKey"));
+document.cookie = "username=Arun;"; //web storage api
+console.log(document.cookie);
+

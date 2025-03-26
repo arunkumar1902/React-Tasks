@@ -105,3 +105,30 @@ fetch("http://localhost:3000/users/2", {
     console.error('error:', error);
 });
 
+
+//promise
+const promise1 = new Promise ((resolve)=> setTimeout(resolve, 1000, 10));
+const promise2 = Promise.reject('Error');
+const promise3 = Promise.resolve(30);
+Promise.all([promise1,promise2,promise3]) //If any promise rejects, Promise.all() will reject immediately
+.then(resolve => console.log(resolve))
+.catch(error => console.log(error));
+Promise.allSettled([promise1,promise2,promise3]) //If any promise rejects, Promise.all() will reject immediately
+.then(resolve => console.log(JSON.stringify(resolve)))
+.catch(error => console.log(error));
+Promise.race([promise1,promise2,promise3]) // returns a promise that settles as soon as the first promise in the input array settles
+.then(resolve => console.log(resolve))
+.catch(error => console.log(error));
+
+
+const p1 = Promise.reject('Error1');
+const p2 = Promise.reject('Error2');
+const p3 = Promise.resolve('Success!');
+Promise.any([p1, p2, p3])//returns a promise that resolves as soon as any of the promises in the array resolves
+.then(value => console.log(value))
+.catch(error => console.log(error));
+
+const a = [1,'2',3,'four',5];
+const numbers = a.filter((val)=>typeof val === 'number'); //filters only number
+console.log(numbers);
+

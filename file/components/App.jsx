@@ -35,6 +35,7 @@ import WelcomeMessage from './ReactAssessment/WelcomeMessage.jsx'
 import BackgroundColor from './ReactAssessment/BackgroundChange.jsx'
 import Signup from './axios/Signup.jsx'
 import UserData from './axios/UserData.jsx'
+import UnMounting from './useEffect/UnMounting.jsx'
 
  
 export const contextDemo = createContext();
@@ -84,7 +85,8 @@ export default function App() {
       <BackgroundColor></BackgroundColor> */}
 
       {/* <Signup></Signup> */}
-      <UserData></UserData>
+      {/* <UserData></UserData> */}
+      <UnMounting></UnMounting>
     </div> 
   )
 }

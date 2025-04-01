@@ -36,6 +36,9 @@ import BackgroundColor from './ReactAssessment/BackgroundChange.jsx'
 import Signup from './axios/Signup.jsx'
 import UserData from './axios/UserData.jsx'
 import UnMounting from './useEffect/UnMounting.jsx'
+import ErrorBoundary from './errorBoundries/ErrorBoundaries.jsx'
+import Count from './errorBoundries/Count.jsx'
+import DomUpdating from './useEffect/DomUpdating.jsx'
 
  
 export const contextDemo = createContext();
@@ -86,7 +89,11 @@ export default function App() {
 
       {/* <Signup></Signup> */}
       {/* <UserData></UserData> */}
-      <UnMounting></UnMounting>
+      {/* <UnMounting></UnMounting> */}
+      {/* <DomUpdating></DomUpdating> */}
+      <ErrorBoundary>
+        <Count />
+      </ErrorBoundary>
     </div> 
   )
 }

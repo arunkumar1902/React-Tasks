@@ -24,3 +24,26 @@ export default function Count() {
     </div>
   );
 }
+
+
+// arr = [1,[2,3],5,6,9];
+// const a = arr.flat();
+
+// for(let i=1; i<=10; i++){
+//     const include = a.includes(i);
+//     if(!include){
+//         console.log(i);
+//     }
+// }
+
+
+// const arr1 = [1,[2,3],5,6,9];
+// const a = arr.flat();
+// const arr2 = [1,2,3,4,5,6,7,8,9,10];
+
+// for(let i=0; i<arr2.length; i++){
+//     const b = a.includes(arr2[i]);
+//     if(!b){
+//         console.log(arr2[i]);
+//     }
+// }

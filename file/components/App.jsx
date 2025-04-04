@@ -39,6 +39,7 @@ import UnMounting from './useEffect/UnMounting.jsx'
 import ErrorBoundary from './errorBoundries/ErrorBoundaries.jsx'
 import Count from './errorBoundries/Count.jsx'
 import DomUpdating from './useEffect/DomUpdating.jsx'
+import UseMemo from './hooks/UseMemo.jsx'
 
  
 export const contextDemo = createContext();
@@ -94,6 +95,8 @@ export default function App() {
       <ErrorBoundary>
         <Count />
       </ErrorBoundary>
+
+      <UseMemo></UseMemo>
     </div> 
   )
 }

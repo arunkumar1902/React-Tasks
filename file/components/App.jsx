@@ -40,6 +40,7 @@ import ErrorBoundary from './errorBoundries/ErrorBoundaries.jsx'
 import Count from './errorBoundries/Count.jsx'
 import DomUpdating from './useEffect/DomUpdating.jsx'
 import UseMemo from './hooks/UseMemo.jsx'
+import UseCallBackParent from './hooks/UseCallBackParent.jsx'
 
  
 export const contextDemo = createContext();
@@ -92,11 +93,12 @@ export default function App() {
       {/* <UserData></UserData> */}
       {/* <UnMounting></UnMounting> */}
       {/* <DomUpdating></DomUpdating> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Count />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
 
-      <UseMemo></UseMemo>
+      {/* <UseMemo></UseMemo> */}
+      <UseCallBackParent></UseCallBackParent>
     </div> 
   )
 }

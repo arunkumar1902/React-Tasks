@@ -41,6 +41,9 @@ import Count from './errorBoundries/Count.jsx'
 import DomUpdating from './useEffect/DomUpdating.jsx'
 import UseMemo from './hooks/UseMemo.jsx'
 import UseCallBackParent from './hooks/UseCallBackParent.jsx'
+import UseReducer from './hooks/useReducer/Formreducer.jsx'
+import CounterReducer from './hooks/useReducer/CounterReducer.jsx'
+import TodoList from './hooks/useReducer/TodoList.jsx'
 
  
 export const contextDemo = createContext();
@@ -98,7 +101,10 @@ export default function App() {
       </ErrorBoundary> */}
 
       {/* <UseMemo></UseMemo> */}
-      <UseCallBackParent></UseCallBackParent>
+      {/* <UseCallBackParent></UseCallBackParent> */}
+      <UseReducer></UseReducer>
+      <CounterReducer></CounterReducer>
+      <TodoList></TodoList>
     </div> 
   )
 }

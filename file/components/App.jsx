@@ -44,6 +44,10 @@ import UseCallBackParent from './hooks/UseCallBackParent.jsx'
 import UseReducer from './hooks/useReducer/Formreducer.jsx'
 import CounterReducer from './hooks/useReducer/CounterReducer.jsx'
 import TodoList from './hooks/useReducer/TodoList.jsx'
+import Timer from './hooks/useRef/Timer.jsx'
+import Focus from './hooks/useRef/Focus.jsx'
+import CountUsingMemo from './hooks/useMemo/CountUsingMemo.jsx'
+import Increment from './hooks/useCallback/Increment.jsx'
 
  
 export const contextDemo = createContext();
@@ -102,9 +106,13 @@ export default function App() {
 
       {/* <UseMemo></UseMemo> */}
       {/* <UseCallBackParent></UseCallBackParent> */}
-      <UseReducer></UseReducer>
-      <CounterReducer></CounterReducer>
-      <TodoList></TodoList>
+      {/* <UseReducer></UseReducer> */}
+      {/* <CounterReducer></CounterReducer> */}
+      {/* <TodoList></TodoList> */}
+      {/* <Timer></Timer> */}
+      {/* <Focus></Focus> */}
+      {/* <CountUsingMemo></CountUsingMemo> */}
+      <Increment></Increment>
     </div> 
   )
 }

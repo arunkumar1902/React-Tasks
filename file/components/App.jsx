@@ -48,8 +48,9 @@ import Timer from './hooks/useRef/Timer.jsx'
 import Focus from './hooks/useRef/Focus.jsx'
 import CountUsingMemo from './hooks/useMemo/CountUsingMemo.jsx'
 import Increment from './hooks/useCallback/Increment.jsx'
+import ListComponent from './errorBoundries/ListComponent.jsx'
 
- 
+
 export const contextDemo = createContext();
 
 export default function App() {
@@ -82,12 +83,12 @@ export default function App() {
       {/* <UseStateHook></UseStateHook> */}
       {/* <UseEffectHook></UseEffectHook> */}
       {/* <contextDemo.Provider value={{title:"UseContext Hook Demo", message }}> */}
-          {/* <UseContextHook></UseContextHook> */}
+      {/* <UseContextHook></UseContextHook> */}
       {/* </contextDemo.Provider> */}
       {/* <UseRefHook></UseRefHook> */}
       {/* <UseMemoHook></UseMemoHook> */}
       {/* <Counter></Counter> */}
-      
+
       {/* React assessment task */}
       {/* <GreetingsMessage name="Arun"></GreetingsMessage>
       <CounterComponent></CounterComponent>
@@ -112,8 +113,9 @@ export default function App() {
       {/* <Timer></Timer> */}
       {/* <Focus></Focus> */}
       {/* <CountUsingMemo></CountUsingMemo> */}
-      <Increment></Increment>
-    </div> 
+      {/* <Increment></Increment> */}
+      <ListComponent></ListComponent>
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { createContext, StrictMode, useState } from 'react'
+import React, { createContext, lazy, StrictMode, Suspense, useState } from 'react'
 import '../assets/styles/App.css'
 import HelloWorld from './HelloWorld.jsx'
 import ClassComponent from './ClassComponent.jsx'
@@ -51,11 +51,19 @@ import Increment from './hooks/useCallback/Increment.jsx'
 import ListComponent from './errorBoundries/ListComponent.jsx'
 
 
+const Lazy = lazy(()=>import('./CodeSplitting/SuspenseComponent.jsx'));
 export const contextDemo = createContext();
 
 export default function App() {
 
   const [message, setMessage] = useState("Hello World");
+
+  const [load,setLoad] = useState(false);
+
+  const handleClick = ()=>{
+    setLoad(!load)
+  }
+
   return (
     <div>
       {/* <HelloWorld></HelloWorld> */}
@@ -114,7 +122,11 @@ export default function App() {
       {/* <Focus></Focus> */}
       {/* <CountUsingMemo></CountUsingMemo> */}
       {/* <Increment></Increment> */}
-      <ListComponent></ListComponent>
+      <button onClick={handleClick}>Click</button>
+      {load && <Suspense fallback={<p>Loading......</p>}>
+        <ListComponent></ListComponent>
+        <Lazy></Lazy>
+      </Suspense>}
     </div>
   )
 }

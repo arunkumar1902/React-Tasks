@@ -7,7 +7,7 @@ export default function ListComponent() {
     return (
         <div>
             {array.map((value, index) => (
-                <ErrorBoundaries key={index}>
+                <ErrorBoundaries key={index} fallback={<p>Something went wrong</p>}>
                     <Comp content={value}></Comp>
                 </ErrorBoundaries>
             ))}

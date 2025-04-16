@@ -21,7 +21,7 @@ class ErrorBoundaries extends Component {
     if (this.state.hasError) {
       return (
         <div>
-          <h2>Something went wrong: {this.state.errorMessage}</h2>
+          <h2>{this.props.fallback} {this.state.errorMessage}</h2>
         </div>
       );
     }

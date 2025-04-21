@@ -49,6 +49,8 @@ import Focus from './hooks/useRef/Focus.jsx'
 import CountUsingMemo from './hooks/useMemo/CountUsingMemo.jsx'
 import Increment from './hooks/useCallback/Increment.jsx'
 import ListComponent from './errorBoundries/ListComponent.jsx'
+import Search from './concurrentRendering/Search.jsx'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 
 const Lazy = lazy(()=>import('./CodeSplitting/SuspenseComponent.jsx'));
@@ -66,6 +68,7 @@ export default function App() {
 
   return (
     <div>
+    <BrowserRouter>
       {/* <HelloWorld></HelloWorld> */}
       {/* <ClassComponent name="Arun"></ClassComponent> */}
       {/* <FunctionalComponent message="Greetings"></FunctionalComponent> */}
@@ -122,11 +125,18 @@ export default function App() {
       {/* <Focus></Focus> */}
       {/* <CountUsingMemo></CountUsingMemo> */}
       {/* <Increment></Increment> */}
-      <button onClick={handleClick}>Click</button>
-      {load && <Suspense fallback={<p>Loading......</p>}>
+      {/* <button onClick={handleClick}>Click</button> */}
+      {/* {load && <Suspense fallback={<p>Loading......</p>}>
         <ListComponent></ListComponent>
         <Lazy></Lazy>
-      </Suspense>}
+      </Suspense>} */}
+
+      {/* <Search></Search> */}
+      <Link to="/search">Search</Link>
+      <Routes>
+        <Route path='/search' element={<Search></Search>}></Route>
+      </Routes>
+    </BrowserRouter>
     </div>
   )
 }

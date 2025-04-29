@@ -39,7 +39,7 @@ xhr.open("DELETE", "http://localhost:3000/users/2", true); //set true for async,
 
 //Fetch API
 //GET
-fetch("GET", "http://localhost:3000/users")
+fetch("http://localhost:3000/users")
     .then(response => response.json())  //Convert the response to JSON
     .then(data => {
         console.log(data);

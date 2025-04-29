@@ -51,6 +51,7 @@ import Increment from './hooks/useCallback/Increment.jsx'
 import ListComponent from './errorBoundries/ListComponent.jsx'
 import Search from './concurrentRendering/Search.jsx'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import CountComponent from '../features/counter/CountComponent.jsx'
 
 
 const Lazy = lazy(()=>import('./CodeSplitting/SuspenseComponent.jsx'));
@@ -137,6 +138,8 @@ export default function App() {
         <Route path='/search' element={<Search></Search>}></Route>
       </Routes>
     </BrowserRouter>
+    {/* <ListComponent></ListComponent> */}
+    <CountComponent></CountComponent>
     </div>
   )
 }

@@ -210,7 +210,7 @@ let person = { // obj destructuring allows to extract properties and assign to a
     username:"arun",
     location:"chennai"
 };
-let [username, location]= person;
+let {username, location}= person;
 console.log(username, location);
 
 //destructuring in function parameters

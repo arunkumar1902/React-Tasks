@@ -52,6 +52,7 @@ import ListComponent from './errorBoundries/ListComponent.jsx'
 import Search from './concurrentRendering/Search.jsx'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import CountComponent from '../features/counter/CountComponent.jsx'
+import Details from '../features/userDetails/Details.jsx'
 
 
 const Lazy = lazy(()=>import('./CodeSplitting/SuspenseComponent.jsx'));
@@ -69,7 +70,7 @@ export default function App() {
 
   return (
     <div>
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
       {/* <HelloWorld></HelloWorld> */}
       {/* <ClassComponent name="Arun"></ClassComponent> */}
       {/* <FunctionalComponent message="Greetings"></FunctionalComponent> */}
@@ -133,13 +134,14 @@ export default function App() {
       </Suspense>} */}
 
       {/* <Search></Search> */}
-      <Link to="/search">Search</Link>
+      {/* <Link to="/search">Search</Link>
       <Routes>
         <Route path='/search' element={<Search></Search>}></Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
     {/* <ListComponent></ListComponent> */}
-    <CountComponent></CountComponent>
+    {/* <CountComponent></CountComponent> */}
+    <Details></Details>
     </div>
   )
 }

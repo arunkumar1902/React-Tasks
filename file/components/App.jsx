@@ -133,7 +133,7 @@ export default function App() {
         <Lazy></Lazy>
       </Suspense>} */}
 
-      {/* <Search></Search> */}
+      <Search></Search>
       {/* <Link to="/search">Search</Link>
       <Routes>
         <Route path='/search' element={<Search></Search>}></Route>
@@ -141,7 +141,7 @@ export default function App() {
     </BrowserRouter> */}
     {/* <ListComponent></ListComponent> */}
     {/* <CountComponent></CountComponent> */}
-    <Details></Details>
+    {/* <Details></Details> */}
     </div>
   )
 }

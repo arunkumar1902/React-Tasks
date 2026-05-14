@@ -87,7 +87,7 @@ fetch("http://localhost:3000/users/2", {
 //PATCH
 fetch("http://localhost:3000/users/2", {
     method:'PATCH',
-    headers:('Content-type', 'application/json'),
+    headers:{'Content-Type': 'application/json'},
     body:{
         name:'kumar'
     }
@@ -113,7 +113,7 @@ const promise3 = Promise.resolve(30);
 Promise.all([promise1,promise2,promise3]) //If any promise rejects, Promise.all() will reject immediately
 .then(resolve => console.log(resolve))
 .catch(error => console.log(error));
-Promise.allSettled([promise1,promise2,promise3]) //If any promise rejects, Promise.all() will reject immediately
+Promise.allSettled([promise1,promise2,promise3]) //If any promise rejects, Promise.all() will wait for all to complete
 .then(resolve => console.log(JSON.stringify(resolve)))
 .catch(error => console.log(error));
 Promise.race([promise1,promise2,promise3]) // returns a promise that settles as soon as the first promise in the input array settles
